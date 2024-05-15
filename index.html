@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f9;
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
             color: #333;
         }
         header {
-            background: #343a40;
+            background: #405de6;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -29,7 +29,7 @@
             padding: 20px;
         }
         .section-title {
-            background: #343a40;
+            background: #833ab4;
             color: #fff;
             padding: 10px;
             margin: 20px 0;
@@ -41,6 +41,17 @@
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideIn 0.5s ease forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         .contact-info {
             background: #f4f4f9;
@@ -48,6 +59,7 @@
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideIn 0.5s ease forwards;
         }
         .contact-info p {
             margin: 0;
@@ -63,7 +75,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: #343a40;
+            background: #405de6;
             color: #fff;
             position: fixed;
             width: 100%;
