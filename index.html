@@ -1,75 +1,134 @@
-<!-- App.svelte -->
-<script>
-    let title = "Shashidhar S A";
-    let contactInfo = {
-        email: "shashidharsa32@gmail.com",
-        mobile: "8217891984"
-    };
-    let experience = [
-        {
-            title: "Manager Impact - Magic Bus India Foundation (June 23 - Present)",
-            details: [
-                "Led the M&E for the integration of life skills into the curriculum across 1300 government schools...",
-                "Developed and operationalized a comprehensive M&E framework...",
-                // Other experience details
-            ]
-        },
-        // Other experience items
-    ];
-    let education = "Siddaganga Institute of Technology, Bengaluru India (2012-2016) - Tech & Engineering Science Mathematics.";
-    let additionalInfo = {
-        summary: "In short summary: Working, learning, and experienced across 5 states with various roles...",
-        languages: ["Kannada", "English", "Hindi", "Telugu"],
-        learning: "Currently learning Japanese.",
-        monitoringEval: "[Link]",
-        linkedin: "https://www.linkedin.com/in/shashidhar-sa-535778b1/"
-    };
-    let footerText = "&copy; 2024 Shashidhar S A";
-</script>
-
-<header>
-    <h1>{title}</h1>
-</header>
-
-<div class="container">
-    <div class="section-content contact-info">
-        <p>Email: {contactInfo.email}</p>
-        <p>Mobile: {contactInfo.mobile}</p>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Experience</div>
-        {#each experience as exp}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashidhar S A - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            color: #333;
+        }
+        header {
+            background: #405de6;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .section-title {
+            background: #833ab4;
+            color: #fff;
+            padding: 10px;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+        .section-content {
+            padding: 10px 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideIn 0.5s ease forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .contact-info {
+            background: #f4f4f9;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideIn 0.5s ease forwards;
+        }
+        .contact-info p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .job-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .job-details {
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #405de6;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shashidhar S A</h1>
+    </header>
+    <div class="container">
+        <section class="contact-info">
+            <p>Email: shashidharsa32@gmail.com</p>
+            <p>Mobile: 8217891984</p>
+        </section>
+        <section>
+            <div class="section-title">Experience</div>
             <div class="section-content">
-                <div class="job-title">{exp.title}</div>
-                <ul>
-                    {#each exp.details as detail}
-                        <li>{detail}</li>
-                    {/each}
-                </ul>
+                <div class="job-details">
+                    <div class="job-title">Manager Impact - Magic Bus India Foundation (June 23 - Present)</div>
+                    <ul>
+                        <li>Led the M&E for the integration of life skills into the curriculum across 1300 government schools in 26 districts within Andhra Pradesh aiming to enhance the educational outcomes for students by incorporating essential life skills education.</li>
+                        <li>Developed and operationalized a comprehensive M&E framework to assess the implementation of life skills into the Govt school.</li>
+                        <li>Coordinated with regional managers & district education officers and school principals to ensure smooth implementation and adherence to project timelines and quality standards.</li>
+                        <li>Designed and facilitated training workshops on M&E across states.</li>
+                        <li>Conducted baseline studies and continuous monitoring to measure the project's impact including pre- and post-implementation student assessments coordinated with CSSL.</li>
+                        <li>Managed data collection analysis and reporting processes providing actionable insights to stakeholders and guiding project refinements.</li>
+                        <li>Oversaw the preparation of detailed reports and presentations for the Department of Education and funding partners highlighting progress and outcomes.</li>
+                    </ul>
+                </div>
+                <!-- Add more job experiences here following the same structure -->
             </div>
-        {/each}
+        </section>
+        <section>
+            <div class="section-title">Education and Qualifications</div>
+            <div class="section-content">
+                <p>Siddaganga Institute of Technology, Bengaluru India (2012-2016) - Tech & Engineering Science Mathematics.</p>
+            </div>
+        </section>
+        <section>
+            <div class="section-title">Additional Information</div>
+            <div class="section-content">
+                <p>In short summary: Working, learning, and experienced across 5 states with various roles such as fellow educator, coordinator, manager, and lead across verticals in education & development, data & tech, organizational development, etc.</p>
+                <p>Loves traveling to build social connections, photography & writing, watching Anime, and learning new languages. Fascinated and passionate about learning & experimenting with what makes a better organization & collaborations, the way people organize better work and thrive toward goals, etc.</p>
+                <p>Known Languages: Kannada, English, Hindi, and Telugu. Currently learning Japanese.</p>
+                <p>Monitoring evaluation & Data Profile: [Link]</p>
+                <p>LinkedIn profile: <a href="https://www.linkedin.com/in/shashidhar-sa-535778b1/" target="_blank">https://www.linkedin.com/in/shashidhar-sa-535778b1/</a></p>
+            </div>
+        </section>
     </div>
-
-    <div class="section">
-        <div class="section-title">Education and Qualifications</div>
-        <div class="section-content">
-            <p>{education}</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Additional Information</div>
-        <div class="section-content">
-            <p>{additionalInfo.summary}</p>
-            <p>Known Languages: {additionalInfo.languages.join(", ")}</p>
-            <p>{additionalInfo.learning}</p>
-            <p>Monitoring evaluation & Data Profile: <a href={additionalInfo.monitoringEval} target="_blank">{additionalInfo.monitoringEval}</a></p>
-            <p>LinkedIn profile: <a href={additionalInfo.linkedin} target="_blank">{additionalInfo.linkedin}</a></p>
-        </div>
-    </div>
-
     <footer>
-        <p>{footerText}</p>
+        <p>&copy; 2024 Shashidhar S A</p>
     </footer>
-</div>
+</body>
+</html>
